@@ -1,4 +1,17 @@
 /*
+  Hi Gaby!  You have a great start to the responsive site!  There are definitely parts of the
+  page that are changing as you resize the page down to a smaller screen.  I did
+  notice an issue where the page is scrolling horizontally on super small (phone-sized) screens.
+  I made some comments that can get that closer to not scrolling.
+
+  I love the fact that you are using rems and percentages everywhere here.  Nice job with that.
+
+  The main part of the blog page looks great!
+
+  I made some more comments in your CSS code below.
+*/
+
+/*
 Project Name: Blank Template
 Client: Your Client
 Author: Your Name
@@ -281,6 +294,9 @@ nav .line:first-of-type{
   margin-top:.7em;
 }
 
+/* 
+  Nice job with the media query definition here!
+*/
 @media screen and (max-width: 768px) {
   body{
     font-size: 1rem; 
@@ -291,6 +307,19 @@ nav .line:first-of-type{
     padding: .25rem;
   
   }
+
+  /*
+    I am adding the following CSS block to tweak the menu to get it to display in the visible
+    part of the page.
+  */
+
+  header nav {
+    width: 100px;
+    margin-top: 0;
+    overflow-x: hidden;
+    float: left;
+  }
+
   .logo{
    margin-top: .25em;
    font-size: 1.75rem;
@@ -298,6 +327,7 @@ nav .line:first-of-type{
 
   nav{
     width:100%;
+    /* This rule is incomplete */
     height: ;
   }
   
@@ -331,23 +361,35 @@ nav .line:first-of-type{
   #page-header {
   width: 100%;
   position: fixed;
+  /*
+    "clear" is not a valid value for the float property.  You probably want "none" here.
+  */
   float: clear;
   }
 
   #page-header nav li:first-child{
   display: block;
-  position: fixed;
+
+  /*
+    I commented out the following lines because they are part of the reason why
+    the page is scrolling horizontally.
+  */
+  /*position: fixed;
   top:.25em;
-  right:.5em;
+  right:.5em;*/
   }
   
   #page-header nav li {
       display: none; 
   }
   
-  ul {
+  /*
+    I commented out the following lines because they are part of the reason why
+    the page is scrolling horizontally.
+  */
+  /*ul {
     height: 0
-  }
+  }*/
   
   #benefit-blurb{
     display: none;
